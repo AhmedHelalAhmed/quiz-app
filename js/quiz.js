@@ -31,11 +31,12 @@ var QUIZ = (function (ns) {
         hideFeedback = function () {
             var feedback = $('.feedback.visible');
             domU.removeClass(feedback, 'visible');
+        }, initialize = function () {
+            hideFeedback()
         };
 
     // Public Method
     sub.checkAnswer = checkAnswer;
-    sub.displayFeedback = displayFeedback;
-    sub.hideFeedback = hideFeedback;
+    sub.initialize = initialize;
     return ns;
 })(UTIL || {});
