@@ -16,7 +16,7 @@ var QUIZ = (function (ns) {
                 ans = strU.breakOut(domU.data($('#q01'), 'answer'), ",");
                 console.log(ans)
                 correct = ans.every(function (val) {
-                    return (value.indexOf(val) > -1);
+                    return (value.toUpperCase().indexOf(val.toUpperCase()) > -1);
                 });
                 result = (correct) ? 'correct' : 'incorrect';
                 displayFeedback(result);
